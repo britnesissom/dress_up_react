@@ -1,0 +1,15 @@
+<div class="header">
+    <h1><%= link_to "Supercorp Dress Up", root_path %></h1>
+    <% if show_form %>
+        <%= form_with(url: select_character_path, class: "header_character_form") do |form| %>
+            <%= form.label "Please choose a character to dress up: ", for: :character %>
+            <%= form.select :character, options_for_select([ "Kara Danvers", "Lena Luthor" ]), {prompt: "- Select Character -"} %> 
+            <%= form.submit "Dress Up!" %>
+        <% end %>
+    <% end %>
+    <% flash.each do |type, msg| %>
+    <div>
+        <%= msg %>
+    </div>
+    <% end %>
+</div>

@@ -1,0 +1,17 @@
+<h1><%= character.name %></h1>
+<div class="person">
+    <div class="body">
+
+        <%= image_tag(character.body) %>
+
+        <div class="selected-clothes">
+            <% character.clothings.each do |item| %>
+                <div id=<%= "selected-#{item.category}" %>>
+                    <%= image_tag item.url, alt: item.name %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<%= render "clothings/clothing_selector", name: character.name.gsub(/\s+/, ''), id: character.id %>

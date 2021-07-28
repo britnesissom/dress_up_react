@@ -1,0 +1,29 @@
+<div class="clothing_selector">
+  <ul class="tabs" id=<%="tabs_#{name}"%>>
+    <li class="tab"><a class="tablinks active" id=<%="tops_#{name}"%> href=<%="#tops_content_#{name}"%>>Tops</a></li>
+    <li class="tab"><a class="tablinks" id=<%="bottoms_#{name}"%> href=<%="#bottoms_content_#{name}"%>>Bottoms</a></li>
+    <li class="tab"><a class="tablinks" id=<%="dresses_#{name}"%> href=<%="#dresses_content_#{name}"%>>Dresses</a></li>
+    <li class="tab"><a class="tablinks" id=<%="shoes_#{name}"%> href=<%="#shoes_content_#{name}"%>>Shoes</a></li>
+    <li class="tab"><a class="tablinks" id=<%="accessories_#{name}"%> href=<%="#accessories_content_#{name}"%>>Accessories</a></li>
+  </ul>
+
+  <div id=<%="tops_content_#{name}"%> class="tabcontent">
+    <%= render "clothings/clothing_type", clothing_type: "top", id: id %>
+  </div>
+
+  <div id=<%="bottoms_content_#{name}"%> class="tabcontent">
+    <%= render "clothings/clothing_type", clothing_type: "bottom", id: id %> 
+  </div>
+
+  <div id=<%="dresses_content_#{name}"%> class="tabcontent">
+    <%= render "clothings/clothing_type", clothing_type: "dress", id: id %>
+  </div>
+
+  <div id=<%="shoes_content_#{name}"%> class="tabcontent">
+    <%= render "clothings/clothing_type", clothing_type: "shoes", id: id %>
+  </div>
+
+  <div id=<%="accessories_content_#{name}"%> class="tabcontent">
+    <%= render "clothings/clothing_type", clothing_type: "accessory", id: id %>
+  </div>
+</div>

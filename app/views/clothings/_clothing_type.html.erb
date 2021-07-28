@@ -1,0 +1,7 @@
+<div class="clothing-items">
+    <% Clothing.where(category: clothing_type).each do |item| %>
+        <div class="clothing-item">
+            <%= link_to image_tag(item.url, alt: item.name), select_clothing_path(id: item.id, char_id: id), method: :post %>
+        </div>
+    <% end %>
+</div>
