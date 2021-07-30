@@ -29,7 +29,6 @@ const Characters = (props) => {
         name={character.name.replace(/\s+/, "")}
         id={character.id}
       />
-      {/* <%= render "clothings/clothing_selector", name: character.name.gsub(/\s+/, ''), id: character.id %> */}
     </>
   );
 };

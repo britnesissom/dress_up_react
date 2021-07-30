@@ -3,82 +3,119 @@
 
 
 # tops
-item = Clothing.create(name: "Cardigan with Pinstripe Shirt", url: "navy_cardigan.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/navy_cardigan.png")
+Clothing.create(name: "Cardigan with Pinstripe Shirt", url: image["secure_url"], category: :top)
 
-item = Clothing.create(name: "Burgundy Blazer with Lace Shirt", url: "burgundy_blazer.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/burgundy_blazer.png")
+Clothing.create(name: "Burgundy Blazer with Lace Shirt", url: image["secure_url"], category: :top)
 
-item = Clothing.create(name: "Dark Red Shirt", url: "red_shirt.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/red_shirt.png")
+Clothing.create(name: "Dark Red Shirt", url: image["secure_url"], category: :top)
 
-item = Clothing.create(name: "DEO Jacket", url: "deo_jacket.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/deo_jacket.png")
+Clothing.create(name: "DEO Jacket", url: image["secure_url"], category: :top)
 
-item = Clothing.create(name: "Gray Cardigan", url: "gray_cardigan.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/gray_cardigan.png")
+Clothing.create(name: "Gray Cardigan", url: image["secure_url"], category: :top)
 
-item = Clothing.create(name: "Snowflake Sweater", url: "snowflake_sweater.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/snowflake_sweater.png")
+Clothing.create(name: "Snowflake Sweater", url: image["secure_url"], category: :top)
 
-item = Clothing.create(name: "Light Pink Sweater", url: "pink_sweater.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/pink_sweater.png")
+Clothing.create(name: "Light Pink Sweater", url: image["secure_url"], category: :top)
 
-item = Clothing.create(name: "Leather Jacket", url: "leather_jacket.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/leather_jacket.png")
+Clothing.create(name: "Leather Jacket", url: image["secure_url"], category: :top)
 
-item = Clothing.create(name: "Clown Shirt", url: "clown_top.png", category: :top)
+image = Cloudinary::Uploader.upload("app/assets/images/clown_top.png")
+Clothing.create(name: "Clown Shirt", url: image["secure_url"], category: :top)
 
 
 
 # dresses
-item = Clothing.create(name: "Rainbow Suit", url: "rainbow_suit.png", category: :dress)
+image = Cloudinary::Uploader.upload("app/assets/images/rainbow_suit.png")
+Clothing.create(name: "Rainbow Suit", url: image["secure_url"], category: :dress)
 
-item = Clothing.create(name: "Red Floral Dress", url: "red_floral_dress.png", category: :dress)
+image = Cloudinary::Uploader.upload("app/assets/images/red_floral_dress.png")
+Clothing.create(name: "Red Floral Dress", url: image["secure_url"], category: :dress)
 
-item = Clothing.create(name: "Flower Romper", url: "flower_romper.png", category: :dress)
+image = Cloudinary::Uploader.upload("app/assets/images/flower_romper.png")
+Clothing.create(name: "Flower Romper", url: image["secure_url"], category: :dress)
 
-item = Clothing.create(name: "Black Sundress", url: "black_sundress.png", category: :dress)
-
+image = Cloudinary::Uploader.upload("app/assets/images/black_sundress.png")
+Clothing.create(name: "Black Sundress", url: image["secure_url"], category: :dress)
 
 
 
 #pants
-item = Clothing.create(name: "DEO Sweatpants", url: "deo_sweatpants.png", category: :bottom)
+image = Cloudinary::Uploader.upload("app/assets/images/deo_sweatpants.png")
+Clothing.create(name: "DEO Sweatpants", url: image["secure_url"], category: :bottom)
 
-item = Clothing.create(name: "Clown Pants", url: "clown_pants.png", category: :bottom)
+image = Cloudinary::Uploader.upload("app/assets/images/clown_pants.png")
+Clothing.create(name: "Clown Pants", url: image["secure_url"], category: :bottom)
 
-item = Clothing.create(name: "Gray Dress Pants", url: "gray_dress_pants.png", category: :bottom)
+image = Cloudinary::Uploader.upload("app/assets/images/gray_dress_pants.png")
+Clothing.create(name: "Gray Dress Pants", url: image["secure_url"], category: :bottom)
 
-item = Clothing.create(name: "Distressed Shorts", url: "distressed_shorts.png", category: :bottom)
+image = Cloudinary::Uploader.upload("app/assets/images/distressed_shorts.png")
+Clothing.create(name: "Distressed Shorts", url: image["secure_url"], category: :bottom)
 
-item = Clothing.create(name: "Workout Shorts", url: "workout_shorts.png", category: :bottom)
+image = Cloudinary::Uploader.upload("app/assets/images/workout_shorts.png")
+Clothing.create(name: "Workout Shorts", url: image["secure_url"], category: :bottom)
 
-item = Clothing.create(name: "Floral Swim Shorts", url: "swim_shorts.png", category: :bottom)
+image = Cloudinary::Uploader.upload("app/assets/images/swim_shorts.png")
+Clothing.create(name: "Floral Swim Shorts", url: image["secure_url"], category: :bottom)
 
-item = Clothing.create(name: "Burnt Orange Chinos", url: "orange_chino.png", category: :bottom)
+image = Cloudinary::Uploader.upload("app/assets/images/orange_chino.png")
+Clothing.create(name: "Burnt Orange Chinos", url: image["secure_url"], category: :bottom)
 
-item = Clothing.create(name: "Olive Green Pants", url: "olive_jeans.png", category: :bottom)
+image = Cloudinary::Uploader.upload("app/assets/images/olive_jeans.png")
+Clothing.create(name: "Olive Green Pants", url: image["secure_url"], category: :bottom)
 
 
 
 #shoes
-item = Clothing.create(name: "Clown Shoes", url: "clown_shoes.png", category: :shoes)
+image = Cloudinary::Uploader.upload("app/assets/images/clown_shoes.png")
+Clothing.create(name: "Clown Shoes", url: image["secure_url"], category: :shoes)
 
-item = Clothing.create(name: "Brown Loafers", url: "brown_loafers.png", category: :shoes)
+image = Cloudinary::Uploader.upload("app/assets/images/brown_loafers.png")
+Clothing.create(name: "Brown Loafers", url: image["secure_url"], category: :shoes)
 
-item = Clothing.create(name: "Black Stilettos", url: "black_heels.png", category: :shoes)
+image = Cloudinary::Uploader.upload("app/assets/images/black_heels.png")
+Clothing.create(name: "Black Stilettos", url: image["secure_url"], category: :shoes)
 
-item = Clothing.create(name: "Tan Booties", url: "tan_booties.png", category: :shoes)
+image = Cloudinary::Uploader.upload("app/assets/images/tan_booties.png")
+Clothing.create(name: "Tan Booties", url: image["secure_url"], category: :shoes)
 
-item = Clothing.create(name: "Cat Vans", url: "cat_vans.png", category: :shoes)
+image = Cloudinary::Uploader.upload("app/assets/images/cat_vans.png")
+Clothing.create(name: "Cat Vans", url: image["secure_url"], category: :shoes)
 
-item = Clothing.create(name: "White Converse", url: "white_converse.png", category: :shoes)
+image = Cloudinary::Uploader.upload("app/assets/images/white_converse.png")
+Clothing.create(name: "White Converse", url: image["secure_url"], category: :shoes)
 
-item = Clothing.create(name: "Black Doc Martens", url: "doc_martens.png", category: :shoes)
+image = Cloudinary::Uploader.upload("app/assets/images/doc_martens.png")
+Clothing.create(name: "Black Doc Martens", url: image["secure_url"], category: :shoes)
 
 
 
 #accessories
-item = Clothing.create(name: "Big Belly Burger", url: "big_belly_burger.png", category: :accessory)
+image = Cloudinary::Uploader.upload("app/assets/images/big_belly_burger.png")
+Clothing.create(name: "Big Belly Burger", url: image["secure_url"], category: :accessory)
 
-item = Clothing.create(name: "Donut", url: "donut.png", category: :accessory)
+image = Cloudinary::Uploader.upload("app/assets/images/donut.png")
+Clothing.create(name: "Donut", url: image["secure_url"], category: :accessory)
 
-item = Clothing.create(name: "Slice of Pizza", url: "pizza.png", category: :accessory)
+image = Cloudinary::Uploader.upload("app/assets/images/pizza.png")
+Clothing.create(name: "Slice of Pizza", url: image["secure_url"], category: :accessory)
 
-item = Clothing.create(name: "Glass of Wine", url: "wine.png", category: :accessory)
-item = Clothing.create(name: "Cell Phone", url: "phone.png", category: :accessory)
-item = Clothing.create(name: "Kale", url: "kale.png", category: :accessory)
-item = Clothing.create(name: "Magazine", url: "magazine.png", category: :accessory)
+image = Cloudinary::Uploader.upload("app/assets/images/wine.png")
+Clothing.create(name: "Glass of Wine", url: image["secure_url"], category: :accessory)
+
+image = Cloudinary::Uploader.upload("app/assets/images/phone.png")
+Clothing.create(name: "Cell Phone", url: image["secure_url"], category: :accessory)
+
+image = Cloudinary::Uploader.upload("app/assets/images/kale.png")
+Clothing.create(name: "Kale", url: image["secure_url"], category: :accessory)
+
+image = Cloudinary::Uploader.upload("app/assets/images/magazine.png")
+Clothing.create(name: "Magazine", url: image["secure_url"], category: :accessory)

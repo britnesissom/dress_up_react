@@ -2,9 +2,6 @@ class CharactersController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
-  def index
-  end
-
   def show
     @character = Character.find(params[:id])
     render :show
@@ -24,7 +21,9 @@ class CharactersController < ApplicationController
     @character.body = name + "_body.png"
     @character.legs = name + "_body_legs.png"
     @character.save
-    redirect_to @character
+    
+    redirect = { url: "/characters/#{@character.id}" }
+    render json: redirect
   end
 
   # select a character from the drop down

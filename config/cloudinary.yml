@@ -1,0 +1,11 @@
+development: 
+  cloud_name: "hisn9cgcl"
+  api_key: "372134539552577"
+  api_secret: "7VxdT2FKHbHP9fx3twYzLWgIiBA"
+  secure: true
+
+production:
+  cloud_name: "hisn9cgcl"
+  api_key: "372134539552577"
+  api_secret: "7VxdT2FKHbHP9fx3twYzLWgIiBA"
+  secure: true

@@ -5,7 +5,6 @@ ruby '2.7.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
-gem 'react-rails'
 # Use postgres as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -52,3 +51,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# image storage
+gem 'cloudinary'
+
+gem "react_on_rails", "= 12.3"
