@@ -1,0 +1,29 @@
+.header {
+  padding-top: 15px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header, h3 {
+  text-align: center;
+}
+
+.header .character-form select {
+  margin: 15px 0;
+  height: 40px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.header .character-form input[type="submit"] {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  height: 40px;
+  background-color: #910000;
+  color: #fff;
+  font-weight: 600;
+}
