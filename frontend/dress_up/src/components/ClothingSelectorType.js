@@ -4,16 +4,19 @@ import "./ClothingSelector.scss";
 
 const ClothingSelectorType = (props) => {
   const [clothing, setClothing] = useState([]);
-  const { type } = props;
+  const { id, type } = props;
 
   // retrieve clothing items upon page load
   useEffect(() => {
-    fetch("http://localhost:3001/api/clothings?" + new URLSearchParams({ type: type }))
+    fetch(
+      "http://localhost:3001/api/clothings?" +
+        new URLSearchParams({ type: type })
+    )
       .then((response) => {
-        console.log(response);
         if (!response.ok) {
           alert(response.status);
         }
+
         return response.json();
       })
       .then((data) => {
@@ -21,35 +24,33 @@ const ClothingSelectorType = (props) => {
       });
   }, [type]);
 
-  const selectItemHandler = (clothingId) => {
-    const url = `http://localhost:3001/api/clothings/select`;
+  const selectItemHandler = (itemId) => {
+    const url = `http://localhost:3001/api/clothings/${itemId}/select`;
 
     fetch(url, {
       method: "POST",
-      body: JSON.stringify({ clothingId: clothingId, charId: props.id }),
+      body: JSON.stringify({ id: itemId, charId: id }),
       headers: {
         "Content-Type": "application/json",
       },
     }).then((response) => {
-      console.log(response);
       if (!response.ok) {
         alert(response.status);
       }
-
-      return response.json();
     });
   };
 
   return (
     <div className="clothing-items">
       {clothing
-        .filter((item) => item.clothing_type === props.type)
-        .map((item) => 
+        .filter((item) => item.category === type)
+        .map((item) => (
           <ClothingItem
-            onClick={selectItemHandler}
-            item={{ id: item.id, url: item.url, name: item.name }}
+            key={item.id}
+            onClick={selectItemHandler.bind(null, item.id)}
+            item={{ url: item.url, name: item.name }}
           />
-        )}
+        ))}
     </div>
   );
 };

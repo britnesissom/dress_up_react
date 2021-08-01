@@ -14,19 +14,3 @@ body, body * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
-
-ul {
-  padding-inline-start: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-.tabcontent {
-  display: none;
-  border: 1px solid #aaa;
-  border-top: none;
-}
-
-.tabcontent.active {
-  display: block;
-}

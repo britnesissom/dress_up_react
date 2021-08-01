@@ -20,7 +20,6 @@ const Home = () => {
     });
 
     const data = await response.json();
-    console.log(data)
     history.push(data.url);
   };
 

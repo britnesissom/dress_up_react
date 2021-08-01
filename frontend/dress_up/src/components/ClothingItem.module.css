@@ -1,0 +1,24 @@
+.clothing-item {
+  display: inline-block;
+  padding: 10px;
+  flex: 0 0 20%;
+}
+
+.clothing-item:not(:first) {
+  margin-left: 30px;
+}
+
+.clothing-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clothing-item button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.clothing-item img {
+  max-width: 200px;
+  max-height: 300px;
+}

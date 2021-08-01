@@ -21,17 +21,6 @@ $tabs-bg-color: #eee !default;
   &.tabs-transparent {
     background-color: transparent;
 
-    .tab a,
-    .tab.disabled a,
-    .tab.disabled a:hover {
-      color: rgba(255,255,255,0.7);
-    }
-
-    .tab a:hover,
-    .tab a.active {
-      color: #fff;
-    }
-
     .indicator {
       background-color: #eee;
     }
@@ -54,38 +43,6 @@ $tabs-bg-color: #eee !default;
     margin: 0;
     text-transform: uppercase;
 
-    a {
-      
-      font-weight: 600;
-
-      &:hover,
-      &:hover.active {
-        background-color: transparentize($tabs-underline-color, .8);
-        outline: none;
-      }
-
-      &:focus,
-      &.active {
-        background-color: transparent;
-        color: $tabs-text-color;
-      }
-
-      color: rgba($tabs-text-color, .7);
-      display: block;
-      height: 100%;
-      padding: 0 24px;
-      font-size: 14px;
-      text-overflow: ellipsis;
-      text-decoration: none;
-      overflow: hidden;
-      transition: color .28s ease, background-color .28s ease;
-    }
-
-    &.disabled a,
-    &.disabled a:hover {
-      color: rgba($tabs-text-color, .4);
-      cursor: default;
-    }
   }
   .indicator {
     position: absolute;
@@ -96,43 +53,9 @@ $tabs-bg-color: #eee !default;
   }
 }
 
-.tabcontent {
-  background-color: #eee;
-  border-radius: 0 0 5px 5px;
-
-  * {
-      margin: 0 auto;
-  }
-}
-
 .clothing-items {
   display: flex;
   justify-content: start;
   overflow-y: auto;
   align-items: center;
-}
-
-.clothing-item {
-  display: inline-block;
-  padding: 10px;
-  flex: 0 0 20%;
-
-  &:not(:first) {
-      margin-left: 30px;
-  }
-
-  &:not(:last-child) {
-      margin-right: 30px;
-  }
-
-  & button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-  }
-
-  & img {
-      max-width: 200px;
-      max-height: 300px;
-  }
 }

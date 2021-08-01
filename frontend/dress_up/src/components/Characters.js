@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ClothingSelector from "./ClothingSelector";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "./util/LoadingSpinner";
+
+import karaBodyImg from "../assets/kara_body.png";
+import lenaBodyImg from "../assets/lena_body.png";
+import "./Characters.scss";
+import Header from "./Header";
 
 const Characters = () => {
   const [character, setCharacter] = useState();
@@ -33,11 +38,10 @@ const Characters = () => {
   }, []);
 
   let clothingContent;
-  console.log(character);
   if (character && character.clothing.length > 0) {
     clothingContent = character.clothing.map((item) => {
       return (
-        <div id={`selected-${item.category}`}>
+        <div key={item.id} id={`selected-${item.category}`}>
           <img src={item.url} alt={item.name} />
         </div>
       );
@@ -50,18 +54,28 @@ const Characters = () => {
       {error && <p>{error}</p>}
       {!error && !isLoading && (
         <>
+          <Header showForm />
           <h1>{character.meta.name}</h1>
-          <div className="person">
-            <div className="body">
-              {/* <img src={character.body} alt="character's body" /> */}
-              <div className="selected-clothes">{clothingContent}</div>
+          <div className="char">
+            <div className="person">
+              <div className="body">
+                <img
+                  src={
+                    character.meta.name.toLowerCase().includes("kara")
+                      ? karaBodyImg
+                      : lenaBodyImg
+                  }
+                  alt="character's body"
+                />
+                <div className="selected-clothes">{clothingContent}</div>
+              </div>
             </div>
-          </div>
 
-          <ClothingSelector
-            name={character.meta.name.replace(/\s+/, "")}
-            id={character.meta.id}
-          />
+            <ClothingSelector
+              name={character.meta.name.replace(/\s+/, "")}
+              id={character.meta.id}
+            />
+          </div>
         </>
       )}
     </>

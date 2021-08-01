@@ -1,0 +1,23 @@
+div.button-group {
+  display: flex;
+}
+
+.tab-contents {
+  background-color: #eee;
+  border-radius: 0 0 5px 5px;
+}
+
+.tab-contents * {
+  margin: 0 auto;
+}
+
+.content {
+  display: none;
+  border: 1px solid #aaa;
+  border-top: none;
+}
+
+.content.active {
+  display: block;
+}
+

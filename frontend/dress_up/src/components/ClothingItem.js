@@ -1,11 +1,12 @@
 import React from "react";
+import classes from "./ClothingItem.module.css";
 
 const ClothingItem = (props) => {
-  const { id, url, name } = props.item;
+  const { url, name } = props.item;
 
   return (
-    <div className="clothing-item">
-      <button onClick={props.onClick.bind(id)}>
+    <div className={classes["clothing-item"]}>
+      <button onClick={props.onClick}>
         <img src={url} alt={name} />
       </button>
     </div>

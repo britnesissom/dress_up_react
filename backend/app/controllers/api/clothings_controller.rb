@@ -6,7 +6,7 @@ class Api::ClothingsController < ApplicationController
   end
 
   def select
-    @character = Character.find(params[:char_id])
+    @character = Character.find(params[:charId])
     @clothing = Clothing.find(params[:id])
 
     # delete old clothing option for selected type e.g. delete old top if new top picked
@@ -24,7 +24,7 @@ class Api::ClothingsController < ApplicationController
     @character.clothings << @clothing 
     @characters = Character.all
 
-    json = { characters: @characters, character: @character}
+    json = { character: @character }
     render json: json
 
     # redirect = { url: "/characters/#{@character.id}" }
