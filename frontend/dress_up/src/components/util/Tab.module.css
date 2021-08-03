@@ -1,13 +1,16 @@
 .tab {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 600;
   padding: 10px 30px;
   cursor: pointer;
-  background: white;
+  background: #eee;
   border: 0;
   outline: 0;
+  color: rgb(31, 0, 116);
+  flex-shrink: 0;
 }
 
 .tab.active {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(141, 0, 0);
   opacity: 1;
 }

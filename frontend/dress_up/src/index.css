@@ -6,10 +6,6 @@ html {
   -o-background-size: cover;
 }
 
-.bg {
-  padding: 10px;
-}
-
 body, body * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;

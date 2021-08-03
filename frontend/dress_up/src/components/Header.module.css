@@ -1,5 +1,6 @@
 .header {
   padding-top: 15px;
+  background: rgba(256,256,256,0.4);
 }
 
 .header a {
@@ -18,12 +19,23 @@
   border-radius: 5px;
 }
 
-.header .character-form input[type="submit"] {
+.header .character-form button {
   border: 1px solid #333;
   border-radius: 5px;
   padding: 10px;
   height: 40px;
   background-color: #910000;
   color: #fff;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.character-form {
+  margin-top: 10px;
+}
+
+.error {
+  padding-bottom: 10px;
+  color: #910000;
   font-weight: 600;
 }

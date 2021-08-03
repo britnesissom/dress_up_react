@@ -24,7 +24,7 @@ class Api::ClothingsController < ApplicationController
     @character.clothings << @clothing 
     @characters = Character.all
 
-    json = { character: @character }
+    json = { character: { meta: @character, clothing: @character.clothings }}
     render json: json
 
     # redirect = { url: "/characters/#{@character.id}" }

@@ -4,40 +4,30 @@ import "./ClothingSelector.scss";
 
 const ClothingSelectorType = (props) => {
   const [clothing, setClothing] = useState([]);
-  const { id, type } = props;
+  const { type, active } = props;
 
   // retrieve clothing items upon page load
   useEffect(() => {
-    fetch(
-      "http://localhost:3001/api/clothings?" +
-        new URLSearchParams({ type: type })
-    )
-      .then((response) => {
-        if (!response.ok) {
-          alert(response.status);
-        }
+    if (active) {
+      fetch(
+        "http://localhost:3001/api/clothings?" +
+          new URLSearchParams({ type: type })
+      )
+        .then((response) => {
+          if (!response.ok) {
+            alert(response.status);
+          }
 
-        return response.json();
-      })
-      .then((data) => {
-        setClothing(data);
-      });
-  }, [type]);
+          return response.json();
+        })
+        .then((data) => {
+          setClothing(data);
+        });
+    }
+  }, [type, active]);
 
   const selectItemHandler = (itemId) => {
-    const url = `http://localhost:3001/api/clothings/${itemId}/select`;
-
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify({ id: itemId, charId: id }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).then((response) => {
-      if (!response.ok) {
-        alert(response.status);
-      }
-    });
+    props.onSelectItem(itemId);
   };
 
   return (

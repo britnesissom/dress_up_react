@@ -1,0 +1,93 @@
+@media (min-width: 1024px) {
+  .bg {
+    background: url("../assets/bg.jpg") center / cover no-repeat fixed;
+  }
+}
+
+@media (max-width: 1023px) {
+  .bg {
+    background: url("../assets/bg_mobile.jpg") center / cover no-repeat fixed;
+  }
+}
+
+.name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.char {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .char {
+    width: 800px;
+  }
+}
+
+.person .body {
+  position: relative;
+  width: 375px;
+  margin: 0 auto;
+
+  & > img {
+    position: relative;
+  }
+}
+
+.selected-clothes {
+  div {
+    position: absolute;
+  }
+
+  #selected-top {
+    top: 117px;
+    left: 90px;
+    z-index: 3;
+
+    img {
+      width: 206px;
+    }
+  }
+
+  #selected-bottom {
+    top: 350px;
+    left: 103px;
+    z-index: 2;
+
+    img {
+      width: 170px;
+      max-height: 430px;
+    }
+  }
+
+  #selected-dress {
+    top: 118px;
+    left: 85px;
+
+    img {
+      width: 210px;
+    }
+  }
+
+  #selected-shoes {
+    top: calc(50% + 400px);
+    left: 190px;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 160px;
+    }
+  }
+
+  #selected-accessory {
+    top: 445px;
+    left: 70px;
+    z-index: 4;
+
+    img {
+      max-width: 110px;
+    }
+  }
+}

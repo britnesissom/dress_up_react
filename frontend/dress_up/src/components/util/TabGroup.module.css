@@ -1,5 +1,14 @@
-div.button-group {
+.tabPicker {
+  padding: 10px;
+}
+
+.button-group {
   display: flex;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  overflow-x: auto;
+  justify-content: center;
 }
 
 .tab-contents {
@@ -15,6 +24,7 @@ div.button-group {
   display: none;
   border: 1px solid #aaa;
   border-top: none;
+  border-radius: 0 0 5px 5px;
 }
 
 .content.active {
